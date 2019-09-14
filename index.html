@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <section>
-      <form id="zipToState">
+    <header>
+      <section>
+        <h1>Convert ZIP Codes to States</h1>
+        <p>Add a list of comma-separated ZIP codes to the ZIP Codes field and submit!</p>
+      </section>
+    </header>
+    <main role="main">
+      <section>
+        <form id="zipToState">
+          <fieldset>
+            <label for="zip">ZIP Codes</label>
+            <textarea id="zip" name="zip" type="text" rows="5"></textarea>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section>
         <fieldset>
-          <label for="zip">ZIP Codes</label>
-          <textarea id="zip" name="zip" type="text"></textarea>
+          <label for="result">Results</label>
+          <textarea id="result" rows="5"></textarea>
         </fieldset>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <section>
-      <fieldset>
-        <label for="result">Results</label>
-        <textarea id="result"></textarea>
-      </fieldset>
-      <button id="copyBtn">Copy Results</button>
-    </section>
+        <button id="copyBtn">Copy Results</button>
+      </section>
+    </main>
+    <footer>
+      <div>Source available on <a href="https://github.com/pkaneshige/zip-to-state" alt="ZIP to State on GitHub">GitHub</a></div>
+    </footer>
     <script src="js/scripts.js"></script>
   </body>
 </html>
