@@ -235,6 +235,7 @@ zipForm.onsubmit = (e) => {
   const zipcodes = zipField.value.split(',');
   const states = zipcodes.map(zipcode => getState(zipcode))
   result.innerHTML = states;
+  gtag('event', 'submit_zip');
 }
 
 // Copy result to clipboard
@@ -243,4 +244,5 @@ copyBtn.onclick = (e) => {
   result.setSelectionRange(0, 99999);
   document.execCommand('copy');
   alert('Copied to clipboard');
+  gtag('event', 'copy_result');
 }
